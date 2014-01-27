@@ -55,3 +55,5 @@ gem "sir-trevor-rails", github: "maxmcd/sir-trevor-rails"
 gem 'activeadmin', github: 'gregbell/active_admin'
 
 gem 'bootstrap-sass', '~> 3.0.3.0'
+
+gem 'rails_12factor', group: :production
