@@ -32,7 +32,7 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-gem 'petrie', "~> 0.1.0"
+gem "petrie", "~> 0.1.3"
 
 gem 'select2-rails'
 
