@@ -25,7 +25,7 @@
     right: 0em;
     bottom: 0em;
     left: 0em;
-    background: url('/assets/background2.png') no-repeat center center; 
+    background: url('background2.png') no-repeat center center; 
     background-size: cover;
 }
 
