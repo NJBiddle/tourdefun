@@ -13,6 +13,24 @@
  *= require_self
  */
 
+ .bottom-right {position:absolute; 
+ 	bottom:5.2em;  
+ 	margin:2em; 
+ 	right: 0;
+ }
+
+ .launch {
+    position: fixed;
+    top: 0em;
+    right: 0em;
+    bottom: 0em;
+    left: 0em;
+    background: url('background2.png') no-repeat center center; 
+    background-size: cover;
+}
+
+
+
  @font-face {
   font-family: 'Glyphicons Halflings';
   src: url('../assets/glyphicons-halflings-regular.eot');
