@@ -1,6 +1,19 @@
 <div class="container">
   <div class="row">
+    <div class="col-sm-12">
+      <ul class="nav nav-tabs">
+        <li class="active"><a href="#">List</a></li>
+        <li><a href="#">Map</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row">
     <div class="col-sm-8">
+      <h1>
+        <%= Timeslot.upcoming.first.start.strftime('%B %d, %Y') %>
+      </h1>
+
       <%= render @timeslots %>
     </div>
   </div>

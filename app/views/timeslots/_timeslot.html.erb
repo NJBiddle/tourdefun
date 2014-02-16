@@ -1,13 +1,25 @@
-<h1>April 14, 2014</h1>
+<%= div_for timeslot do %>
+  <header>
+    <div class="row">
+      <div class="col-sm-12">
+        <h2>
+          <%= timeslot.start.strftime('%l:%M%P') %>
+          <small class="text-muted">
+            <%= link_venue timeslot.venue %>
+          </small>
+        </h2>
+      </div>
+    </div>
+  </header>
 
-<header>
-  <h2><%= timeslot.start.strftime('%l:%M%P') %></h2>
-  <h4 class="text-muted">
-    <%= link_venue timeslot.venue %>
-  </h4>
-</header>
+  <% timeslot.artists.each do |artist| %>
+    <%= link_to_unless artist.website.blank?,
+          artist.name, artist.website %>
+  <% end %>
 
-<% timeslot.artists.each do |artist| %>
-  <%= link_to_unless artist.website.blank?,
-        artist.name, artist.website %>
+  <% unless timeslot.artists.any? %>
+    <p class="text-muted">
+      No artists scheduled for this time
+    </p>
+  <% end %>
 <% end %>
