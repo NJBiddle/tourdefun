@@ -1,0 +1,9 @@
+<header>
+  <h2><%= l timeslot.start, format: :short %></h2>
+  <h4 class="text-muted"><%= timeslot.venue.name %></h4>
+</header>
+
+<% timeslot.artists.each do |artist| %>
+  <%= artist.name %> <br>
+  <%= artist.website %>
+<% end %>
