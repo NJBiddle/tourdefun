@@ -12,12 +12,17 @@
     </div>
   </header>
 
-  <% timeslot.artists.each do |artist| %>
-    <%= link_to_unless artist.website.blank?,
-          artist.name, artist.website %>
-  <% end %>
+  <% if timeslot.artists.any? %>
+    <ul class="list-plain">
+      <% timeslot.artists.each do |artist| %>
+        <li>
+          <%= link_to_unless artist.website.blank?,
+                artist.name, artist.website %>
+        </li>
+      <% end %>
+    </ul>
 
-  <% unless timeslot.artists.any? %>
+  <% else %>
     <p class="text-muted">
       No artists scheduled for this time
     </p>
