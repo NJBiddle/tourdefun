@@ -15,7 +15,7 @@ ActiveAdmin.register Timeslot do
 
 		f.inputs "Details" do
 			f.input :artists
-      f.input :venue, as: :select, collection: Venue.all
+      f.input :venue_id, as: :select, collection: Venue.all
     end
 
 		f.actions
