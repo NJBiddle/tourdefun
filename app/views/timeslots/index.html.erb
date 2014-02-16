@@ -3,8 +3,10 @@
 <% @timeslots.each do |timeslot| %>
 	<h3><%= timeslot.start %></h3>
 	<h4><%= timeslot.venue.name %></h4>
-		<% timeslot.artists.each do |artist| %>
+
+	<% timeslot.artists.each do |artist| %>
 		<%= artist.name %> <br>
 		<%= artist.website %>
-	<% end %>
+  <% end %>
+
 <% end %>
