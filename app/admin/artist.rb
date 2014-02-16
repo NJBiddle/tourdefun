@@ -6,4 +6,13 @@ ActiveAdmin.register Artist do
     end
   end
 
+  form do |f|
+    f.inputs "Details" do
+      f.input :name
+      f.input :website
+    end
+
+    f.actions
+  end
+
 end
