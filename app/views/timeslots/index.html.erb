@@ -15,6 +15,13 @@
       </h1>
 
       <%= render @timeslots %>
+
+      <% if @timeslots.blank? %>
+        <h4 class="text-muted">
+          I got nothin.
+        </h4>
+      <% end %>
+
     </div>
   </div>
 </div>
