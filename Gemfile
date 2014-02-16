@@ -40,3 +40,4 @@ gem 'select2-rails'
 gem "font-awesome-rails"
 gem 'bootstrap-sass', '~> 3.0.3.0'
 gem 'compass-rails'
+gem 'just-datetime-picker'

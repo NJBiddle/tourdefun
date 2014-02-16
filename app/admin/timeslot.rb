@@ -8,8 +8,8 @@ ActiveAdmin.register Timeslot do
 
   form do |f|
     f.inputs "Basic" do
-      f.input :start, as: :datetime_picker
-      f.input :end, as: :datetime_picker
+      f.input :start, as: :just_datetime_picker
+      f.input :end, as: :just_datetime_picker
       f.input :hangup
     end
 

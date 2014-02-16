@@ -5,6 +5,9 @@ class Timeslot < ActiveRecord::Base
   default_scope { order('start ASC') }
   scope :upcoming, -> { where("start > ?", Date.today.beginning_of_year) }
 
+  just_define_datetime_picker :start
+  just_define_datetime_picker :end
+
   def self.first_show_time
     shows = upcoming
     if shows.any?
