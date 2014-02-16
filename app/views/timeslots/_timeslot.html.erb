@@ -4,6 +4,6 @@
 </header>
 
 <% timeslot.artists.each do |artist| %>
-  <%= artist.name %> <br>
-  <%= artist.website %>
+  <%= link_to_unless artist.website.blank?,
+        artist.name, artist.website %>
 <% end %>
