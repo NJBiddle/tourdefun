@@ -7,13 +7,16 @@
 
 $ ->
 
-	$('[data-tags]').each ->
-		$(this).select2
-			tags: $(this).data('tags'),
-			width: '76%'
+  $('[data-tags]').each ->
+    $(this).select2
+      tags: $(this).data('tags'),
+      width: '76%'
 
-	$('[data-tags][data-value]').each ->
-		$(this).select2('data', $(this).data('value'))
+  $('[data-tags][data-value]').each ->
+    $(this).select2('data', $(this).data('value'))
 
-	$('#timeslot_artist_ids').select2
-		width: '76%'
+  $('#timeslot_artist_ids').select2
+    width: '76%'
+
+  $('.select2').select2
+    width: '76%'
