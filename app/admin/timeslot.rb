@@ -1,5 +1,5 @@
 ActiveAdmin.register Timeslot do
-	
+
 	controller do
  		def permitted_params
      	 	params.permit!
@@ -7,16 +7,16 @@ ActiveAdmin.register Timeslot do
 	end
 
 	form do |f|
-		f.inputs "Details" do
+		f.inputs "Basic" do
 			f.input :start
 			f.input :end
 			f.input :hangup
 		end
 
-		f.inputs "Artists" do
+		f.inputs "Details" do
 			f.input :artists
-		end
-
+      f.input :venue, as: :select, collection: Venue.all
+    end
 
 		f.actions
 	end
