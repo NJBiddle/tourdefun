@@ -5,4 +5,11 @@ class Timeslot < ActiveRecord::Base
   default_scope { order('start ASC') }
   scope :upcoming, -> { where("start > ?", Date.today.beginning_of_year) }
 
+  def self.first_show_time
+    shows = upcoming
+    if shows.any?
+      shows.first.start.strftime('%B %d, %Y')
+    end
+  end
+
 end

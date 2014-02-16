@@ -11,7 +11,7 @@
   <div class="row">
     <div class="col-sm-8">
       <h1>
-        <%= Timeslot.upcoming.first.start.strftime('%B %d, %Y') %>
+        <%= Timeslot.first_show_time %>
       </h1>
 
       <%= render @timeslots %>
