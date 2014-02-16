@@ -7,22 +7,17 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	
+	<div id="header">
+		<%= render 'layouts/header' %>
+	</div>
 
-	<nav class="navbar navbar-default" role="navigation">
-	  <div class="navbar-header">
-	       <a class="navbar-brand" href="#">navi</a>
-		</div>
-	</nav>
+	<div id="main">
+		<%= yield %>
+	</div>
 
-	<div class="container">
-		<div class="row mt centered">
-			<h1><div class="col-lg-6">
-				<%= yield %>
-			</div></h1>
-			<div class="col-lg-6">
-				<%= image_tag "tdflogo.png" %>
-			</div>
-		</div>
+	<div id="footer">
+		<%= render 'layouts/footer' %>
 	</div>
 
 </body>
