@@ -1,6 +1,10 @@
+<h1>April 14, 2014</h1>
+
 <header>
-  <h2><%= l timeslot.start, format: :short %></h2>
-  <h4 class="text-muted"><%= timeslot.venue.name %></h4>
+  <h2><%= timeslot.start.strftime('%l:%M%P') %></h2>
+  <h4 class="text-muted">
+    <%= link_venue timeslot.venue %>
+  </h4>
 </header>
 
 <% timeslot.artists.each do |artist| %>
