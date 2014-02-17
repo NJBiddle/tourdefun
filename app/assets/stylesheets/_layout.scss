@@ -1,3 +1,13 @@
 @import 'compass/layout';
 
 @include sticky-footer(100px);
+
+ .bg-image {
+  position: fixed;
+  top: 0em;
+  right: 0em;
+  bottom: 0em;
+  left: 0em;
+  background: url('background.png') no-repeat center center;
+  background-size: cover;
+}
