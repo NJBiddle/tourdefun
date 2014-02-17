@@ -3,6 +3,10 @@ return unless window.location.pathname == "/shows"
 $ ->
   $canvas = $('#map-canvas')
 
+  # TODO:
+  # * Routing point to point
+  # * Handle multiple timeslots per marker
+  #
   map =
     options: {
       center: new google.maps.LatLng(-34.397, 150.644),
