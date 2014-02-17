@@ -1,13 +1,12 @@
 @import 'compass/layout';
-
 @include sticky-footer(100px);
 
- .bg-image {
-  position: fixed;
-  top: 0em;
-  right: 0em;
-  bottom: 0em;
-  left: 0em;
-  background: url('background.png') no-repeat center center;
-  background-size: cover;
+#masthead {
+  background: image-url('background.png') center left no-repeat;
+  margin-top: -35px;
+  margin-bottom: 60px;
+  h1 {
+    color: white;
+    margin: 60px 0;
+  }
 }
