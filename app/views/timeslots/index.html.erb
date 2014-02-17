@@ -2,26 +2,38 @@
   <div class="row">
     <div class="col-sm-12">
       <ul class="nav nav-tabs">
-        <li class="active"><a href="#">List</a></li>
-        <li><a href="#">Map</a></li>
+        <li class="active">
+          <a href="#list" data-toggle="tab">List</a>
+        </li>
+        <li>
+          <a href="#map" data-toggle="tab">Map</a>
+        </li>
       </ul>
     </div>
   </div>
 
-  <div class="row">
-    <div class="col-sm-8">
-      <h1>
-        <%= Timeslot.first_show_time %>
-      </h1>
+  <div class="tab-content">
+    <div class="tab-pane active" id="list">
+      <div class="row">
+        <div class="col-sm-8">
+          <h1>
+            <%= Timeslot.first_show_time %>
+          </h1>
 
-      <%= render @timeslots %>
+          <%= render @timeslots %>
 
-      <% if @timeslots.blank? %>
-        <h4 class="text-muted">
-          I got nothin.
-        </h4>
-      <% end %>
+          <% if @timeslots.blank? %>
+            <h4 class="text-muted">
+              I got nothin.
+            </h4>
+          <% end %>
 
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-pane" id="map">
+      [map]
     </div>
   </div>
 </div>
