@@ -36,8 +36,11 @@ gem "the_sortable_tree", "~> 2.3.0"
 gem "sir-trevor-rails", github: "maxmcd/sir-trevor-rails"
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'select2-rails'
+gem 'carrierwave'
+gem 'mini_magick'
 
 gem "font-awesome-rails"
 gem 'bootstrap-sass', '~> 3.0.3.0'
 gem 'compass-rails'
 gem 'just-datetime-picker'
+
