@@ -1,6 +1,17 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-12">
+      <% Sponsor.level('gold').each do |sponsor| %>
+        <% # TODO: Use a bigger image than :thumb %>
+        <%= link_to_unless sponsor.website.blank?,
+              image_tag(sponsor.logo.url(:thumb), alt: sponsor.name)
+          %>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12">
       <p>
         &copy; <%= Date.today.year %> Tour de Fun
       </p>
