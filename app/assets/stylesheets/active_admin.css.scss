@@ -1,29 +1,46 @@
-// SASS variable overrides must be declared before loading up Active Admin's styles.
-//
-// To view the variables that Active Admin provides, take a look at
-// `app/assets/stylesheets/active_admin/mixins/_variables.css.scss` in the
-// Active Admin source.
-//
-// For example, to change the sidebar width:
-// $sidebar-width: 242px;
-
-// Active Admin's got SASS!
 @import "active_admin/mixins";
 @import "active_admin/base";
+@import "medium-editor/dist/css/medium-editor";
+@import "select2";
 @import "font-awesome";
 @import "sortable_tree";
 @import "nested_options";
-@import "sir-trevor/icons";
-@import "sir-trevor/sir-trevor";
-
-@import "petrie/sir-trevor";
 @import "petrie/sortable-tree";
-@import "select2";
-
 @import "just_datetime_picker/base";
 
+.hidden {
+  display: none !important;
+}
+form fieldset legend {
+  position: relative;
+}
+.medium-editable {
+  @import "variables";
+  @import "bootstrap/variables";
+  @import "bootstrap/mixins";
+  @import "bootstrap/normalize";
+  @import "bootstrap/type";
 
-// Overriding any non-variable SASS must be done after the fact.
-// For example, to change the default status-tag color:
-//
-//   .status_tag { background: #6090DB; }
+  margin: -10px 100px;
+  border-left: 1px solid #EAEAEA;
+  border-right: 1px solid #EAEAEA;
+  border-bottom: 1px solid #EAEAEA;
+  background: white;
+  padding: 30px;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  ul, ol {
+    margin: 0 1.5em 1.5em 0;
+    padding-left: 1.5em;
+  }
+  ul {
+    list-style-type: disc;
+  }
+  ol {
+    list-style-type: decimal;
+  }
+  &:after {
+    color: silver;
+    position: static;
+  }
+}
