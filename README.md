@@ -10,6 +10,13 @@
     bundle
     rake db:create db:migrate db:seed
 
+### Image uploading
+
+Create `config/s3.rb` and add your S3 key and secret. This file is git-ignored and should never be committed.
+
+    ENV['S3_KEY'] = 'ADD YOUR KEY'
+    ENV['S3_SECRET'] = 'ADD YOUR SECRET'
+
 ## Brainstorming
 
 * Large text, 18-20px
