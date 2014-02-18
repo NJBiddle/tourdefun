@@ -1,0 +1,18 @@
+<%= semantic_form_for [:admin, @page] do |f| %>
+  <%= f.inputs "Details" do %>
+    <%= f.input :title %>
+    <%= f.input :parent_id, as: :select,
+            collection: nested_set_options(resource_class, resource) { |i|
+              "#{'&mdash;' * i.level} #{i.title}".html_safe
+            } %>
+  <% end %>
+
+  <%= f.inputs "Content" do %>
+    <div class="medium-editable" data-for="#page_body"></div>
+    <%= f.input :body, label: false, input_html: {
+        class: 'hidden'
+      } %>
+  <% end %>
+
+  <%= f.actions %>
+<% end %>
