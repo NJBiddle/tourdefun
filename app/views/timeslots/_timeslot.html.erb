@@ -5,7 +5,7 @@
         <h2>
           <%= timeslot.start.strftime('%l:%M%P') %>
           <small class="text-muted">
-            <%= link_venue timeslot.venue %>
+            <%= link_venue timeslot.venue, data: { location: timeslot.venue.location.squish } %>
           </small>
         </h2>
       </div>
