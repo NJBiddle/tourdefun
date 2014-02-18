@@ -38,6 +38,7 @@ gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'select2-rails'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'fog'
 
 gem "font-awesome-rails"
 gem 'bootstrap-sass', '~> 3.0.3.0'

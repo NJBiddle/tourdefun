@@ -92,9 +92,20 @@ GEM
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
     erubis (2.7.0)
+    excon (0.31.0)
     execjs (2.0.2)
+    fog (1.20.0)
+      builder
+      excon (~> 0.31.0)
+      formatador (~> 0.2.0)
+      mime-types
+      multi_json (~> 1.0)
+      net-scp (~> 1.1)
+      net-ssh (>= 2.1.3)
+      nokogiri (>= 1.5.11)
     font-awesome-rails (4.0.3.0)
       railties (>= 3.2, < 5.0)
+    formatador (0.2.4)
     formtastic (2.3.0.rc2)
       actionpack (>= 3.0)
     friendly_id (5.0.1)
@@ -129,8 +140,14 @@ GEM
     mime-types (1.25)
     mini_magick (3.7.0)
       subexec (~> 0.2.1)
+    mini_portile (0.5.2)
     minitest (4.7.5)
     multi_json (1.8.2)
+    net-scp (1.1.2)
+      net-ssh (>= 2.6.5)
+    net-ssh (2.8.0)
+    nokogiri (1.6.1)
+      mini_portile (~> 0.5.0)
     orm_adapter (0.5.0)
     petrie (0.1.2)
       awesome_nested_set (~> 2.1.6)
@@ -219,6 +236,7 @@ DEPENDENCIES
   carrierwave
   coffee-rails (~> 4.0.0)
   compass-rails
+  fog
   font-awesome-rails
   jbuilder (~> 1.2)
   jquery-rails
