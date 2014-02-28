@@ -13,9 +13,11 @@
         </h2>
 
         <div id="stats">
-          <%= artists_count %> artists,
-          <%= venues_count %> venues,
-          and motherfucking bikes
+          <%= link_to timeslots_path do  %>
+            <%= artists_count %> artists,
+            <%= venues_count %> venues,
+            and all the bikes&nbsp;&rarr;
+          <% end %>
         </div>
 
       </div>

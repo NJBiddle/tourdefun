@@ -33,7 +33,7 @@
       }
     }
     .cutout {
-      background: image-url('cutout.png') center bottom no-repeat;
+      background: image-url('cutout@2x.png') center bottom no-repeat;
       height: 35px;
       margin-top: -17px;
       background-size: cover;
@@ -68,6 +68,13 @@
   }
   #stats {
     font-size: 30px;
+    a {
+      color: inherit;
+      &:hover {
+        text-decoration: none;
+        border-bottom: 1px solid;
+      }
+    }
   }
 }
 
