@@ -4,10 +4,10 @@ module ApplicationHelper
   end
 
   def artists_count
-    Artist.count
+    Artist.playing_this_year.count
   end
 
   def venues_count
-    Venue.count
+    Venue.booked_this_year.count
   end
 end

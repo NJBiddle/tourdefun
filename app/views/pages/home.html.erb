@@ -14,8 +14,8 @@
 
         <div id="stats">
           <%= link_to timeslots_path do  %>
-            <%= artists_count %> artists,
-            <%= venues_count %> venues,
+            <%= pluralize artists_count, 'artist' %>,
+            <%= pluralize venues_count, 'venue' %>,
             and all the bikes&nbsp;&rarr;
           <% end %>
         </div>
