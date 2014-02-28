@@ -13,9 +13,12 @@ class Sponsor < ActiveRecord::Base
     }
   end
 
-  # TODO: add year to sponsors
+  def self.years_for_select
+    (2010..Date.today.year).to_a.reverse
+  end
+
   def self.this_year
-    Sponsor.all
+    Sponsor.where(year: Date.today.year)
   end
 
 end

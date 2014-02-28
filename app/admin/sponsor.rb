@@ -2,8 +2,8 @@ ActiveAdmin.register Sponsor do
 
   controller do
     def permitted_params
-        params.permit!
-      end
+      params.permit!
+    end
   end
 
   form do |f|
@@ -16,6 +16,10 @@ ActiveAdmin.register Sponsor do
 
       f.input :level, as: :select,
         collection: Sponsor.levels_for_select
+
+      f.input :year, as: :select,
+        collection: Sponsor.years_for_select,
+        selected: Date.today.year
     end
 
     f.actions

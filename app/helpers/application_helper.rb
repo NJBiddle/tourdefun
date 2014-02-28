@@ -10,4 +10,8 @@ module ApplicationHelper
   def venues_count
     Venue.this_year.count
   end
+
+  def gold_sponsors
+    Sponsor.level('gold').this_year
+  end
 end
