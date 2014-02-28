@@ -1,16 +1,15 @@
-<nav class="navbar navbar-default navbar-static-top" role="navigation">
-  <div class="navbar-header">
-    <a class="navbar-brand" href="/">TOUR DE FUN</a>
-  </div>
+<div id="primary-nav">
+  <nav class="nav-left col-sm-5 text-right">
+    <a href="/about">About</a>
+    <a href="/sponsors">Shows</a>
+  </nav>
 
-  <div class="collapse navbar-collapse" id="primary-nav">
-    <ul class="nav navbar-nav">
-      <li>
-        <a href="/shows">Shows</a>
-      </li>
-      <li>
-        <a href="/about">About</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+  <a href="/" id="logo" class="col-sm-2">
+    <%= image_tag "tdflogo-white.png", :alt => "TOUR DE FUN", :class => 'img-responsive' %>
+  </a>
+
+  <nav class="nav-right col-sm-5">
+    <a href="/sponsors">Sponors</a>
+    <a href="/contact">Contact</a>
+  </nav>
+</div>

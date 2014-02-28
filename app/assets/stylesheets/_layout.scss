@@ -1,6 +1,33 @@
 @import 'compass/layout';
 @include sticky-footer(100px);
 
+#primary-nav {
+  @include clearfix;
+  @include background-image(linear-gradient(bottom, rgba(#000, 0), rgba(#000, 0.2)));
+  nav {
+    margin-top: 40px;
+  }
+  a {
+    color: white;
+    @include inline-block;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 28px;
+    text-shadow: 0 1px 1px rgba(#000, 0.8);
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  #logo {
+    padding: 0;
+    text-align: center;
+    img {
+      max-width: 80%;
+      @include inline-block;
+    }
+  }
+}
+
 #masthead {
   background: image-url('background.png') center left no-repeat;
   margin-top: -35px;
