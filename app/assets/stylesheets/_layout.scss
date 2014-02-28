@@ -82,6 +82,7 @@
   background: image-url('background.png') center left no-repeat;
   background-size: cover;
   position: relative;
+  overflow: hidden;
   &:before {
     background: rgba(#8e44ad, 0.5);
     width: 100%;
