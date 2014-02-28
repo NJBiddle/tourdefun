@@ -3,18 +3,20 @@
 <%= render_sir_trevor(@page.body) %>
 
 <div class="container">
-    <div class="col-lg-12 text-center">
-    </div>
+    <div id="hero">
+      <div class="col-sm-12 text-center">
+        <h1>
+          Tour De Fun
+        </h1>
+        <h2>
+          <%= Timeslot.first_show_time %>
+        </h2>
 
-    <div class="col-sm-4">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, aut facilis modi libero cum explicabo quo laborum doloremque velit sed quam nesciunt eaque accusamus aspernatur blanditiis molestias quisquam repellendus hic!
-    </div>
-    <div class="col-sm-4">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, sint, iure at incidunt temporibus rem molestias nam iusto excepturi dignissimos tempore quisquam ex. Voluptatibus, eos, enim sed cumque quasi atque?
-    </div>
-    <div class="col-sm-4">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo similique quibusdam fuga dolor aliquid ea voluptatibus quo nostrum consequatur maiores! Nostrum, voluptas, vitae iure laboriosam ducimus saepe totam distinctio rem?
-    </div>
+        <%= artists_count %> artists,
+        <%= venues_count %> venues,
+        and motherfucking bikes
 
+      </div>
+    </div>
 </div>
 
