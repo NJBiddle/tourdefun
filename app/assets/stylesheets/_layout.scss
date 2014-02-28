@@ -6,22 +6,28 @@
   @include background-image(linear-gradient(bottom, rgba(#000, 0), rgba(#000, 0.2)));
   nav {
     margin-top: 40px;
-  }
-  a {
-    color: white;
-    @include inline-block;
-    padding: 10px 20px;
-    font-weight: bold;
-    font-size: 28px;
-    text-shadow: 0 1px 1px rgba(#000, 0.8);
-    font-family: pacificoregular;
-    &:hover {
-      text-decoration: none;
+    a {
+      color: white;
+      @include inline-block;
+      padding: 10px 20px;
+      font-weight: bold;
+      font-size: 28px;
+      text-shadow: 0 1px 1px rgba(#000, 0.8);
+      font-family: pacificoregular;
+      @include transition(opacity 200ms ease-out);
+      &:hover {
+        text-decoration: none;
+        @include opacity(0.5);
+      }
     }
   }
   #logo {
     padding: 0;
     text-align: center;
+    @include transition(500ms);
+    &:hover {
+      @include transform(rotate(360deg));
+    }
     img {
       max-width: 80%;
       @include inline-block;
