@@ -13,4 +13,9 @@ class Sponsor < ActiveRecord::Base
     }
   end
 
+  # TODO: add year to sponsors
+  def self.this_year
+    Sponsor.all
+  end
+
 end
