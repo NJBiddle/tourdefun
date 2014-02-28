@@ -1,4 +1,10 @@
 #pages.home {
+  #header {
+    background: none;
+    &:before {
+      background: none;
+    }
+  }
   .bg-image {
     &:after {
       position: absolute;

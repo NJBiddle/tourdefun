@@ -1,0 +1,8 @@
+<% if @page and not @page.home? %>
+  <div id="page-title" class="text-center">
+    <h1 class="pacifico">
+      <%= @page.title %>
+    </h1>
+    <h4><%= @page.subtitle %></h4>
+  </div>
+<% end %>
