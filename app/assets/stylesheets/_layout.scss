@@ -24,13 +24,33 @@
   #logo {
     padding: 0;
     text-align: center;
-    @include transition(500ms);
-    &:hover {
-      @include transform(rotate(360deg));
-    }
     img {
       max-width: 80%;
       @include inline-block;
+      @include transition(500ms);
+      &:hover {
+        @include transform(rotate(360deg));
+      }
+    }
+    .cutout {
+      background: image-url('cutout.png') center bottom no-repeat;
+      height: 35px;
+      margin-top: -17px;
+      background-size: cover;
+      position: relative;
+      &:before, &:after {
+        background: white;
+        position: absolute;
+        content: '';
+        top: 0;
+        width: 1000%;
+        left: -1000%;
+        height: 100%;
+      }
+      &:after {
+        left: 100%;
+        right: 1000%;
+      }
     }
   }
 }
