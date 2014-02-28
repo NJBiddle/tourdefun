@@ -3,10 +3,11 @@ class Timeslot < ActiveRecord::Base
   belongs_to :venue
 
   default_scope { order('start ASC') }
-  scope :upcoming, -> { where("start >= ?", Date.today.beginning_of_year) }
-  scope :current, -> {
-    where("start >= ? AND start <= ?", Date.today.beginning_of_year,
-                                       Date.today.end_of_year)
+  scope :upcoming, -> {
+    where("start >= ?", Date.today.beginning_of_year)
+  }
+  scope :this_year, -> {
+    where(start: (Date.today.beginning_of_year..Date.today.end_of_year))
   }
 
   just_define_datetime_picker :start

@@ -18,7 +18,7 @@ class Sponsor < ActiveRecord::Base
   end
 
   def self.this_year
-    Sponsor.where(year: Date.today.year)
+    where(year: Date.today.year)
   end
 
 end
