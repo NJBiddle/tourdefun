@@ -3,7 +3,8 @@ class Artist < ActiveRecord::Base
 
   def self.this_year
     all.select do |artist|
-      artist.timeslot.this_year?
+      timeslot = artist.timeslot
+      timeslot.this_year? if timeslot
     end
   end
 end
