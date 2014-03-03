@@ -1,5 +1,53 @@
-pages = %w(home about)
-
+# Pages
+pages = %w(home about contact)
 pages.each do |page|
-  Page.create(title: page.capitalize)
+  Page.find_or_create_by(title: page.capitalize)
 end
+
+# Venues
+Venue.where(name: "Fond Object").first_or_create(location: "1313 McGavock Pike\n Nashville, TN 37216")
+Venue.where(name: "Mitchell's Deli").first_or_create(location: "1306 McGavock Pike\n Nashville, TN 37216")
+Venue.where(name: "The East Room").first_or_create(location: "2412 Gallatin Ave\n Nashville, Tennessee 37206")
+Venue.where(name: "Boheme Collectif").first_or_create(location: "919 Gallatin Ave #8\n Nashville, TN 37206")
+Venue.where(name: "Josh's Warehouse").first_or_create(location: "")
+Venue.where(name: "The Groove").first_or_create(location: "1103 Calvin Ave\n Nashville, TN 37206")
+Venue.where(name: "Dino's").first_or_create(location: "411 Gallatin Ave\n Nashville, TN 37206")
+Venue.where(name: "Barista Parlor").first_or_create(location: "519 Gallatin Ave\n Nashville, TN 37206")
+Venue.where(name: "Grassy Knoll").first_or_create(location: "")
+Venue.where(name: "Drifter's / The Building").first_or_create(location: "1008 Woodland St\n Nashville, TN 37206")
+Venue.where(name: "East Pavilion").first_or_create(location: "2410 Brasher Ave\n Nashville, TN 37206")
+Venue.where(name: "Crying Wolf").first_or_create(location: "823 Woodland St.\n Nashville, Tennessee 37206")
+Venue.where(name: "5 Spot").first_or_create(location: "1006 Forrest Ave\n Nashville, TN 37206")
+
+# Artists
+Artist.where(name: "Meth dad").first_or_create(website: "http://www.methdad.com")
+Artist.where(name: "Body of Light").first_or_create(website: "https://soundcloud.com/bodyoflightmusic")
+Artist.where(name: "The Joy Of Painting").first_or_create(website: "http://joyofpainting.bandcamp.com/")
+Artist.where(name: "The Terror Pigeon Dance Revolt").first_or_create(website: "http://theterrorpigeondancerevolt.bandcamp.com/")
+Artist.where(name: "Churchyard").first_or_create(website: "http://churchyard.bandcamp.com/")
+Artist.where(name: "Shy Guy").first_or_create(website: "http://shyguytunes.bandcamp.com/")
+Artist.where(name: "Awesome Shirt").first_or_create(website: "https://myspace.com/awesomeshirtxxx")
+Artist.where(name: "Linear Downfall").first_or_create(website: "http://www.lineardownfall.com/")
+Artist.where(name: "Josephine and the Wildfront").first_or_create(website: "https://josephineandthewildfront.bandcamp.com/music")
+Artist.where(name: "Bows and Arrows").first_or_create(website: "http://bowsandarrows.bandcamp.com/")
+Artist.where(name: "Chalaxy").first_or_create(website: "http://chalaxy.bandcamp.com/")
+Artist.where(name: "Dot Com").first_or_create(website: "https://soundcloud.com/dotcom-nashville")
+Artist.where(name: "Penicillin Baby").first_or_create(website: "http://penicillinbaby.bandcamp.com/")
+Artist.where(name: "Dedsa").first_or_create(website: "http://dedsa.bandcamp.com/")
+Artist.where(name: "The Prophet Nathan").first_or_create(website: "http://theprophetnathan.bandcamp.com/")
+Artist.where(name: "Ben Spinks Supermelt").first_or_create(website: "http://benspinkssupermelt.bandcamp.com/")
+Artist.where(name: "Christlove").first_or_create(website: "http://christlove.bandcamp.com/")
+Artist.where(name: "Girls And Money").first_or_create(website: "https://www.facebook.com/girlsandmoney")
+Artist.where(name: "Young Breh").first_or_create(website: "http://youngbreh.bandcamp.com/")
+Artist.where(name: "kidDEAD").first_or_create(website: "http://www.kiddead.com/")
+Artist.where(name: "Creature Comfort").first_or_create(website: "http://creaturecomfort1.bandcamp.com/album/fox-tales")
+Artist.where(name: "Treekeeper").first_or_create(website: "https://soundcloud.com/treekeeper")
+Artist.where(name: "Crayons and Antidotes").first_or_create(website: "https://soundcloud.com/crayons-and-antidotes")
+Artist.where(name: "Coach").first_or_create
+Artist.where(name: "Megajoos").first_or_create(website: "http://megajoos.bandcamp.com/")
+Artist.where(name: "Mantra Mantra Mantra").first_or_create(website: "http://mantramantramantra.bandcamp.com/")
+Artist.where(name: "T.RUST").first_or_create
+Artist.where(name: "Don Coyote").first_or_create(website: "http://doncoyote.bandcamp.com/")
+Artist.where(name: "The Subnovas").first_or_create(website: "http://subnovas.bandcamp.com/")
+Artist.where(name: "Jung Youth").first_or_create(website: "http://jungyouth.com/")
+Artist.where(name: "Duperocho").first_or_create(website: "https://www.facebook.com/duperocho")
