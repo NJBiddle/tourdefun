@@ -14,19 +14,15 @@
 
   <div class="tab-content">
     <div class="tab-pane active" id="list">
-      <div class="row">
-        <div class="col-sm-8">
 
-          <%= render @timeslots %>
+      <%= render @timeslots %>
 
-          <% if @timeslots.blank? %>
-            <h4 class="text-muted">
-              I got nothin.
-            </h4>
-          <% end %>
+      <% if @timeslots.blank? %>
+        <h4 class="text-muted">
+          I got nothin.
+        </h4>
+      <% end %>
 
-        </div>
-      </div>
     </div>
 
     <div class="tab-pane" id="map">
