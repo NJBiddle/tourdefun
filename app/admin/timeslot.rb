@@ -10,7 +10,9 @@ ActiveAdmin.register Timeslot do
     f.inputs "Basic" do
       f.input :start, as: :just_datetime_picker
       f.input :end, as: :just_datetime_picker
-      f.input :hangup
+      f.input :description, input_html: {
+        rows: 3
+      }
     end
 
     f.inputs "Details" do

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140228174614) do
+ActiveRecord::Schema.define(version: 20140309231155) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -82,7 +82,7 @@ ActiveRecord::Schema.define(version: 20140228174614) do
   create_table "timeslots", force: true do |t|
     t.datetime "start"
     t.datetime "end"
-    t.string   "hangup"
+    t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "venue_id"
