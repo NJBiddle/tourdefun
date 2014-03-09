@@ -1,8 +1,14 @@
 <div class="col-sm-4">
   <div class="platinum-sponsor">
-    <%= link_to platinum_sponsor.website, target: '_blank' do %>
+    <% if platinum_sponsor.website.blank? %>
       <%= image_tag platinum_sponsor.logo_url(:large),
             class: 'img-responsive' %>
+
+    <% else %>
+      <%= link_to platinum_sponsor.website do %>
+        <%= image_tag platinum_sponsor.logo_url(:large),
+            class: 'img-responsive' %>
+      <% end %>
     <% end %>
   </div>
 </div>
