@@ -1,4 +1,5 @@
 #= require active_admin/base
+#= require jquery-ui-1.10.4.custom
 #= require jquery.ui.nestedSortable
 #= require sortable_tree/initializer
 #= require select2
