@@ -83,6 +83,13 @@
   background-size: cover;
   position: relative;
   overflow: hidden;
+  @media only screen and (max-width: $container-sm) {
+    background: none;
+    &:before {
+      background: none;
+      display: none;
+    }
+  }
   &:before {
     background: rgba(#8e44ad, 0.5);
     width: 100%;
