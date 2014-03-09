@@ -1,7 +1,7 @@
 class Sponsor < ActiveRecord::Base
   mount_uploader :logo, LogoUploader
 
-  LEVELS = %w(gold silver bronze)
+  LEVELS = %w(platinum gold silver bronze)
 
   scope :level, lambda { |level|
     where(level: LEVELS.index(level))
