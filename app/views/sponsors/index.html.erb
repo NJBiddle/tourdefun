@@ -1,11 +1,24 @@
 <div class="container">
   <div class="row">
-    <div class="col-sm-6">
-      <ul>
-        <% @sponsors.each do |sponsor| %>
-          <li><%= sponsor.name %></li>
-        <% end %>
-      </ul>
+    <div class="platinum-sponsors">
+      <%= render partial: 'platinum_sponsor',
+                 collection: @platinum_sponsors %>
     </div>
+
+    <div class="gold-sponsors">
+      <%= render partial: 'gold_sponsor',
+                 collection: @gold_sponsors %>
+    </div>
+
+    <div class="silver-sponsors">
+      <%= render partial: 'gold_sponsor',
+                 collection: @silver_sponsors %>
+    </div>
+
+    <div class="bronze-sponsors">
+      <%= render partial: 'gold_sponsor',
+                 collection: @bronze_sponsors %>
+    </div>
+
   </div>
 </div>
