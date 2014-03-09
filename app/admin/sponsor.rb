@@ -5,7 +5,6 @@ ActiveAdmin.register Sponsor do
     end
   end
 
-
   index do
     column :logo do |sponsor|
       image_tag sponsor.logo_url(:thumb)
