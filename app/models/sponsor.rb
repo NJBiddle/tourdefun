@@ -7,6 +7,10 @@ class Sponsor < ActiveRecord::Base
     where(level: LEVELS.index(level))
   }
 
+  def self.level_from_index(index)
+    LEVELS[index].capitalize
+  end
+
   def self.levels_for_select
     (0...LEVELS.length).map { |i|
       [LEVELS[i].capitalize, i]
@@ -19,6 +23,10 @@ class Sponsor < ActiveRecord::Base
 
   def self.this_year
     where(year: Date.today.year)
+  end
+
+  def self.for_year(year)
+    where(year: year)
   end
 
 end
