@@ -1,4 +1,4 @@
-<%= div_for timeslot, class: 'row' do %>
+<%= div_for timeslot, class: "row #{timeslot_past(timeslot)}" do %>
   <header class="col-sm-12">
     <h2>
       <strong><%= timeslot.start.strftime('%l:%M%P') %></strong>

@@ -4,6 +4,15 @@
   height: 600px;
 }
 
+.timeslot {
+  &.past {
+    @include opacity(0.5);
+    a {
+      color: $gray-light;
+    }
+  }
+}
+
 .timeslot-description {
   font-size: 16px;
 }
