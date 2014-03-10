@@ -1,0 +1,15 @@
+.navbar-transparent {
+  background: black;
+  .navbar-brand {
+    width: 64px;
+  }
+  .navbar-toggle {
+    outline: none;
+    .icon-bar {
+      background: white;
+      @include box-shadow(0 1px 0 rgba(#000, 0.5));
+    }
+  }
+  .navbar-nav {
+  }
+}
