@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
-    <div class="col-sm-12">
-      <ul class="nav nav-tabs">
+    <div class="col-sm-10 col-sm-offset-1">
+      <ul class="nav nav-tabs hidden-xs">
         <li class="active">
           <a href="#list" data-toggle="tab">List</a>
         </li>
@@ -13,16 +13,16 @@
   </div>
 
   <div class="tab-content">
-    <div class="tab-pane active" id="list">
+    <div class="tab-pane active row" id="list">
+      <div class="col-sm-10 col-sm-offset-1">
+        <%= render @timeslots %>
 
-      <%= render @timeslots %>
-
-      <% if @timeslots.blank? %>
-        <h4 class="text-muted">
-          I got nothin.
-        </h4>
-      <% end %>
-
+        <% if @timeslots.blank? %>
+          <h4 class="text-muted">
+            I got nothin.
+          </h4>
+        <% end %>
+      </div>
     </div>
 
     <div class="tab-pane" id="map">
