@@ -1,5 +1,5 @@
 .navbar-transparent {
-  background: black;
+  background: #2c3e50;
   .navbar-brand {
     width: 64px;
   }
@@ -7,9 +7,23 @@
     outline: none;
     .icon-bar {
       background: white;
-      @include box-shadow(0 1px 0 rgba(#000, 0.5));
     }
   }
   .navbar-nav {
+    a {
+      color: white;
+      border-bottom: 1px solid rgba(#fff, 0.1);
+      &:hover {
+        background: none;
+        color: white;
+      }
+    }
+    li {
+      &:last-child {
+        a {
+          border-bottom: none;
+        }
+      }
+    }
   }
 }
