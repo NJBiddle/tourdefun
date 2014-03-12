@@ -1,0 +1,32 @@
+// Place all the styles related to the sponsors controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.sponsors-logos {
+  position: relative;
+  margin: 30px 0;
+  @include clearfix;
+  .group-title {
+    margin-bottom: 30px;
+    text-align: center;
+    color: silver;
+    font-weight: bold;
+  }
+  .logo-container {
+    display: table;
+    width: 100%;
+    .center {
+      display: table-cell;
+      text-align: center;
+      vertical-align: middle;
+    }
+  }
+  @include respond-to($container-sm) {
+    img {
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 40px;
+    }
+  }
+}

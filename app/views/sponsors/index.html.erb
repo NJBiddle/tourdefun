@@ -1,14 +1,22 @@
 <div class="container">
   <div class="row">
     <div class="platinum-sponsors sponsors-logos">
+      <h4 class="group-title">
+        Platinum Sponsors
+      </h4>
       <%= render partial: 'platinum_sponsor',
                  collection: @platinum_sponsors %>
     </div>
 
-    <div class="gold-sponsors">
-      <%= render partial: 'gold_sponsor',
-                 collection: @gold_sponsors %>
-    </div>
+    <% if @gold_sponsors.any? %>
+      <div class="gold-sponsors sponsors-logos">
+        <h4 class="group-title">
+          Gold Sponsors
+        </h4>
+        <%= render partial: 'gold_sponsor',
+                   collection: @gold_sponsors %>
+      </div>
+    <% end %>
 
     <div class="silver-sponsors">
       <%= render partial: 'gold_sponsor',
