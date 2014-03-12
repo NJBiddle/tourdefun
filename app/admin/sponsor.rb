@@ -1,4 +1,6 @@
 ActiveAdmin.register Sponsor do
+  config.sort_order = "position_desc"
+
   (2010..Date.today.year).each do |year|
     scope year.to_s.to_sym do |sponsors|
       sponsors.for_year(year)
@@ -38,6 +40,8 @@ ActiveAdmin.register Sponsor do
       f.input :year, as: :select,
         collection: Sponsor.years_for_select,
         selected: Date.today.year
+
+      f.input :position
     end
 
     f.actions

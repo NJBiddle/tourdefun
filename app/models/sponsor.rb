@@ -3,12 +3,14 @@ class Sponsor < ActiveRecord::Base
 
   LEVELS = %w(platinum gold silver bronze)
 
+  default_scope { order('position ASC') }
+
   scope :level, lambda { |level|
     where(level: LEVELS.index(level))
   }
 
-  def self.level_from_index(index)
-    LEVELS[index].capitalize
+  def self.level_from_index(i)
+    LEVELS[i].capitalize if i
   end
 
   def self.levels_for_select
