@@ -17,16 +17,25 @@
                    collection: @gold_sponsors %>
       </div>
     <% end %>
+    
+    <% if @silver_sponsors.any? %>
+      <div class="silver-sponsors sponsors-logos">
+        <h4 class="group-title">
+          Silver Sponsors
+        </h4>
+        <%= render partial: 'silver_sponsor',
+                   collection: @silver_sponsors %>
+      </div>
+    <% end %>
 
-    <div class="silver-sponsors">
-      <%= render partial: 'gold_sponsor',
-                 collection: @silver_sponsors %>
-    </div>
-
-    <div class="bronze-sponsors">
-      <%= render partial: 'gold_sponsor',
-                 collection: @bronze_sponsors %>
-    </div>
-
+    <% if @bronze_sponsors.any? %>
+      <div class="bronze-sponsors sponsors-logos">
+        <h4 class="group-title">
+          Bronze Sponsors
+        </h4>
+        <%= render partial: 'bronze_sponsor',
+                   collection: @bronze_sponsors %>
+      </div>
+    <% end %>
   </div>
 </div>

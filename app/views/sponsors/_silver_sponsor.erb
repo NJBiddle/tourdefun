@@ -1,8 +1,14 @@
-<div class="col-sm-3">
+<div class="col-sm-2">
   <div class="silver-sponsor">
-    <%= link_to silver_sponsor.website, target: '_blank' do %>
+    <% if silver_sponsor.website.blank? %>
       <%= image_tag silver_sponsor.logo_url(:medium),
-            class: 'img-responsive' %>
+            class: 'img-responsive center-block' %>
+
+    <% else %>
+      <%= link_to silver_sponsor.website do %>
+        <%= image_tag silver_sponsor.logo_url(:medium),
+            class: 'img-responsive center-block' %>
+      <% end %>
     <% end %>
   </div>
 </div>

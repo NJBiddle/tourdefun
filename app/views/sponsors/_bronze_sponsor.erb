@@ -1,7 +1,14 @@
-<div class="col-sm-3">
+<div class="col-sm-1">
   <div class="bronze-sponsor">
-    <%= link_to bronze_sponsor.website, target: '_blank' do %>
-      <%= bronze_sponsor.name %>
+    <% if bronze_sponsor.website.blank? %>
+      <%= image_tag bronze_sponsor.logo_url(:medium),
+            class: 'img-responsive center-block' %>
+
+    <% else %>
+      <%= link_to bronze_sponsor.website do %>
+        <%= image_tag bronze_sponsor.logo_url(:medium),
+            class: 'img-responsive center-block' %>
+      <% end %>
     <% end %>
   </div>
 </div>

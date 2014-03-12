@@ -2,12 +2,12 @@
   <div class="platinum-sponsor">
     <% if platinum_sponsor.website.blank? %>
       <%= image_tag platinum_sponsor.logo_url(:medium),
-            class: 'img-responsive' %>
+            class: 'img-responsive center-block' %>
 
     <% else %>
       <%= link_to platinum_sponsor.website do %>
         <%= image_tag platinum_sponsor.logo_url(:medium),
-            class: 'img-responsive' %>
+            class: 'img-responsive center-block' %>
       <% end %>
     <% end %>
   </div>
