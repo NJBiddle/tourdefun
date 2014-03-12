@@ -11,6 +11,7 @@ ActiveAdmin.register Page do
 
   controller do
     include TheSortableTreeController::Rebuild
+    skip_before_filter :set_page_title
 
     def index
       @resource = Page.nested_set
