@@ -8,13 +8,13 @@ $ ->
   # * Handle multiple timeslots per marker
   #
   map =
-    options: {
-      center: new google.maps.LatLng(-34.397, 150.644),
+    options:
+      center: new google.maps.LatLng(-34.397, 150.644)
       zoom: 8
-    },
-    geocoder: new google.maps.Geocoder(),
-    bounds: new google.maps.LatLngBounds(),
-    infowindow: new google.maps.InfoWindow(),
+      scrollwheel: false
+    geocoder: new google.maps.Geocoder()
+    bounds: new google.maps.LatLngBounds()
+    infowindow: new google.maps.InfoWindow()
 
     initialize: ->
       @canvas = new google.maps.Map($canvas[0], @options)
