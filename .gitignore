@@ -18,7 +18,7 @@
 .DS_Store
 
 # S3 config
-config/s3.rb
+config/*s3.rb
 
 # uploads
 public/uploads
