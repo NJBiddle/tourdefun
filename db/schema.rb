@@ -77,7 +77,7 @@ ActiveRecord::Schema.define(version: 20140312013642) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "year"
-    t.integer  "postition"
+    t.integer  "position"
   end
 
   create_table "timeslots", force: true do |t|
