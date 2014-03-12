@@ -27,15 +27,6 @@ GIT
       redcarpet (~> 2.0.1)
       twitter-text (~> 1.4)
 
-PATH
-  remote: ../petrie
-  specs:
-    petrie (0.1.3)
-      awesome_nested_set (~> 3.0.0.rc.1)
-      friendly_id (~> 5.0.0)
-      rails (~> 4.0.0)
-      the_sortable_tree (~> 2.3.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -67,8 +58,8 @@ GEM
       activesupport (>= 3.0.0)
     arel (4.0.2)
     atomic (1.1.15)
-    awesome_nested_set (3.0.0.rc.3)
-      activerecord (>= 4.0.0, < 5)
+    awesome_nested_set (2.1.6)
+      activerecord (>= 3.0.0)
     bcrypt (3.1.7)
     bcrypt-ruby (3.1.5)
       bcrypt (>= 3.1.3)
@@ -169,6 +160,11 @@ GEM
     nokogiri (1.6.1)
       mini_portile (~> 0.5.0)
     orm_adapter (0.5.0)
+    petrie (0.1.3)
+      awesome_nested_set (~> 2.1.6)
+      friendly_id (~> 5.0.0)
+      rails (~> 4.0.0)
+      the_sortable_tree (~> 2.3.0)
     pg (0.17.1)
     polyamorous (0.6.4)
       activerecord (>= 3.0)
@@ -265,7 +261,7 @@ DEPENDENCIES
   jquery-rails
   just-datetime-picker
   mini_magick
-  petrie!
+  petrie (~> 0.1.3)
   pg
   rails (~> 4.0.1)
   rails_12factor

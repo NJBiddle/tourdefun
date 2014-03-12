@@ -31,8 +31,7 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-# gem 'petrie', "~> 0.1.3"
-gem 'petrie', path: '../petrie'
+gem 'petrie', "~> 0.1.3"
 gem "the_sortable_tree", "~> 2.3.0"
 gem "sir-trevor-rails", github: "maxmcd/sir-trevor-rails"
 gem 'activeadmin', github: 'gregbell/active_admin'
