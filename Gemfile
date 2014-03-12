@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.1'
+gem 'rails', '~> 4.0.1'
 
 gem 'pg'
 
@@ -31,7 +31,8 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-gem 'petrie', "~> 0.1.0"
+# gem 'petrie', "~> 0.1.3"
+gem 'petrie', path: '../petrie'
 gem "the_sortable_tree", "~> 2.3.0"
 gem "sir-trevor-rails", github: "maxmcd/sir-trevor-rails"
 gem 'activeadmin', github: 'gregbell/active_admin'
@@ -47,7 +48,9 @@ gem 'just-datetime-picker'
 
 gem "bower-rails", "~> 0.7.1"
 
-gem 'rails_12factor'
+group :production do
+  gem 'rails_12factor'
+end
 
 group :development do
   gem 'heroku_san'
