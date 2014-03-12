@@ -1,9 +1,11 @@
 <div class="container">
-  <div class="row">
+  <div class="row sponsors-logos">
       <% platinum_sponsors.each do |sponsor| %>
-    <div class="col-sm-4">
+    <div class="col-sm-4 text-center">
         <%= link_to_unless sponsor.website.blank?,
-              image_tag(sponsor.logo.url(:small), alt: sponsor.name)
+              image_tag(sponsor.logo.url(:medium),
+                        alt: sponsor.name,
+                        class: 'img-responsive')
           %>
     </div>
       <% end %>

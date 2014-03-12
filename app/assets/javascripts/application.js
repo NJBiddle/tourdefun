@@ -15,3 +15,24 @@
 //= require turbolinks
 //= require bootstrap
 //= require timeslots
+
+var resizeSponsorLogos = function () {
+  var $sponsors_logos = $('.sponsors-logos img');
+
+  var smallestLogo = 1000;
+  $sponsors_logos.each(function(index, el) {
+    var this_height = $(el).height();
+
+    if (this_height < smallestLogo) {
+      smallestLogo = this_height
+    }
+  });
+  $sponsors_logos.each(function(index, el) {
+    $(el).height(smallestLogo);
+  });
+}
+
+$(window).load(resizeSponsorLogos);
+$(window).resize(function() {
+  setTimeout(resizeSponsorLogos, 200);
+});
