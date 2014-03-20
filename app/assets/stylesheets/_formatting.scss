@@ -1,3 +1,10 @@
+a {
+  &:hover {
+    text-decoration: none;
+    border-bottom: 1px solid;
+  }
+}
+
 .pacifico {
   font-family: pacificoregular;
 }

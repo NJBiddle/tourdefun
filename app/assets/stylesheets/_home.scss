@@ -7,5 +7,9 @@
   }
   #copyright {
     color: white;
+    a {
+      color: inherit;
+      border-bottom: 1px solid;
+    }
   }
 }
