@@ -76,6 +76,11 @@
   background-size: cover;
   position: relative;
   overflow: hidden;
+  a {
+    &:hover {
+      border-bottom: none;
+    }
+  }
   @media only screen and (max-width: $container-sm) {
     background: none;
     &:before {
