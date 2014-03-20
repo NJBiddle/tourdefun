@@ -13,13 +13,19 @@
           Bike centric music and arts festival
         </h2>
 
-        <div id="stats">
+        <div id="slogan">
+          <%= link_to timeslots_path do %>
+            Together we do fun things. Let's do fun things, together.
+          <% end %>
+        </div>
+        
+        <!-- <div id="stats">
           <%= link_to timeslots_path do  %>
             <%= pluralize artists_count, 'artist' %>,
             <%= pluralize venues_count, 'venue' %>,
             food trucks, local beer, free to all ages&nbsp;&rarr;
           <% end %>
-        </div>
+        </div> -->
 
       </div>
     </div>
