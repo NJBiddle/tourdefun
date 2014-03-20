@@ -30,3 +30,10 @@
     }
   }
 }
+
+.bronze-sponsor {
+  height: 120px;
+  @include respond-to($container-md) {
+    height: 150px;
+  }
+}
