@@ -3,15 +3,9 @@
       <% platinum_sponsors.each do |sponsor| %>
     <div class="col-sm-6 text-center">
         <%= link_to_unless sponsor.website.blank?,
-              if @page.home?
-                image_tag(sponsor.logo.url(:inverted),
-                          alt: sponsor.name,
-                          class: 'img-responsive center-block')
-              else
-                image_tag(sponsor.logo.url(:medium),
-                          alt: sponsor.name,
-                          class: 'img-responsive center-block')
-              end
+              image_tag(sponsor.logo.url(@page.home? ? :medium_inverted : :medium),
+                        alt: sponsor.name,
+                        class: 'img-responsive center-block')
           %>
     </div>
       <% end %>

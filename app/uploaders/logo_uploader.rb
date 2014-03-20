@@ -6,6 +6,13 @@ class LogoUploader < CarrierWave::Uploader::Base
   # include CarrierWave::RMagick
   include CarrierWave::MiniMagick
 
+  SIZES = {
+    thumb: [100, 100],
+    small: [180, 180],
+    medium: [250, 250],
+    large: [600, 600]
+  }
+
   # Choose what kind of storage to use for this uploader:
   if Rails.env.development?
     storage :file
@@ -45,24 +52,39 @@ class LogoUploader < CarrierWave::Uploader::Base
 
   # Create different versions of your uploaded files:
   version :thumb do
-    process :resize_to_fit => [100, 100]
+    process :resize_to_fit => SIZES[:thumb]
   end
 
   version :small do
-    process :resize_to_fit => [180, 180]
+    process :resize_to_fit => SIZES[:small]
+  end
+
+  version :small_inverted do
+    process :convert_to_grayscale,
+            :invert,
+            :resize_to_fit => SIZES[:small]
   end
 
   version :medium do
-    process :resize_to_fit => [250, 250]
+    process :resize_to_fit => SIZES[:medium]
+  end
+
+  version :medium_inverted do
+    process :convert_to_grayscale,
+            :invert,
+            :resize_to_fit => SIZES[:medium]
   end
 
   version :large do
-    process :resize_to_fit => [600, 600]
+    process :resize_to_fit => SIZES[:large]
   end
 
-  version :inverted do
-    process :convert_to_grayscale, :invert
+  version :large_inverted do
+    process :convert_to_grayscale,
+            :invert,
+            :resize_to_fit => SIZES[:large]
   end
+
 
   # Add a white list of extensions which are allowed to be uploaded.
   # For images you might use something like this:
