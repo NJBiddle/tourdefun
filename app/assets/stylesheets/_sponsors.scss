@@ -32,8 +32,25 @@
 }
 
 .bronze-sponsor {
-  height: 120px;
+  height: 210px;
+  line-height: 210px;
+  text-align: center;
+  a {
+    display: block;
+    height: 100%;
+  }
+  img {
+    max-width: 100%;
+  }
   @include respond-to($container-md) {
     height: 150px;
+    line-height: 150px;
+  }
+  @include respond-to($container-sm) {
+    height: 150px;
+    line-height: 150px;
+    img {
+      @include inline-block;
+    }
   }
 }
