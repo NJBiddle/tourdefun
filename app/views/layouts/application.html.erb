@@ -15,6 +15,9 @@
 
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+
+  <%= render 'layouts/analytics' %>
+
 </head>
 <body class="<%= action_name %>" id="<%= controller_name %>">
 
