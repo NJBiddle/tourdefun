@@ -1,6 +1,10 @@
 module ApplicationHelper
   def link_venue(venue, options = {})
-    link_to venue.name, "http://maps.google.com/?q=#{venue.location.squish}", options
+    link_map venue.name, venue, options
+  end
+
+  def link_map(string, resource, options = {})
+    link_to string, "http://maps.google.com/?q=#{resource.location.squish}", options
   end
 
   def artists_count

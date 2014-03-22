@@ -1,5 +1,5 @@
 module TimeslotsHelper
-  def timeslot_past(timeslot)
-    'past' if Time.now > timeslot.start
+  def timeslot_past(start)
+    'past' if Time.now > start
   end
 end

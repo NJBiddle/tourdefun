@@ -1,27 +1,21 @@
-<%= div_for timeslot, class: "row #{timeslot_past(timeslot)}" do %>
+<%= div_for timeslot, class: "row" do %>
   <header class="col-sm-12">
-    <h2>
-      <strong><%= timeslot.start.strftime('%l:%M%P') %></strong>
-      <small class="text-muted">
-        <%= link_venue timeslot.venue, data: { location: timeslot.venue.location.squish } %>
-      </small>
-    </h2>
+    <h3>
+      <%= link_map "<i class='fa fa-map-marker fa-fw'></i>".html_safe, timeslot.venue %>
+      <%= timeslot.venue.name %>
+    </h3>
   </header>
 
-  <% if timeslot.artists.any? %>
-    <div class="col-sm-5">
-      <ul class="list-plain">
-        <% timeslot.artists.each do |artist| %>
-          <li>
-            <%= link_to_unless artist.website.blank?,
-                  artist.name, artist.website %>
-          </li>
-        <% end %>
-      </ul>
-    </div>
+  <div class="text-muted timeslot-description">
+    <%= simple_format timeslot.description %>
+  </div>
 
-    <div class="col-sm-7 text-muted timeslot-description">
-      <%= simple_format timeslot.description %>
+  <% if timeslot.artists.any? %>
+    <div class="col-sm-8">
+      <%=raw timeslot.artists.map { |a|
+            link_to_unless a.website.blank?,
+              a.name, a.website
+          }.to_sentence %>
     </div>
 
   <% else %>

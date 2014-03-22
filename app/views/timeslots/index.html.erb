@@ -2,7 +2,17 @@
   <div class="tab-content">
     <div class="tab-pane active row" id="list">
       <div class="col-sm-10 col-sm-offset-1">
-        <%= render @timeslots %>
+
+        <% @timeslots.group_by(&:start).each do |start, timeslots| %>
+          <div class="timesection <%= timeslot_past(start) %>">
+            <h2>
+              <strong><%= start.strftime('%l:%M%P') %></strong>
+            </h2>
+
+            <%= render timeslots %>
+          </div>
+        <% end %>
+
 
         <% if @timeslots.blank? %>
           <h4 class="text-muted">

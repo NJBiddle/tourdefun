@@ -4,12 +4,22 @@
   height: 600px;
 }
 
-.timeslot {
+.timesection {
+  margin-bottom: 60px;
+  h2 {
+    margin-bottom: 0;
+  }
   &.past {
     @include opacity(0.5);
     a {
       color: $gray-light;
     }
+  }
+}
+
+.timeslot {
+  a {
+    font-weight: bold;
   }
 }
 
