@@ -15,6 +15,7 @@
 //= require turbolinks
 //= require jquery.equalheights/jquery.equalheights
 //= require bootstrap
+//= require link_to
 //= require timeslots
 //= require sponsors
 //= require analytics

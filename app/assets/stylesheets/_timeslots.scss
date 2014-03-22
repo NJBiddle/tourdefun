@@ -8,6 +8,22 @@
   margin-bottom: 60px;
   h2 {
     margin-bottom: 0;
+    position: relative;
+    margin-left: -34px;
+    &:hover {
+      .browser-link-to {
+        visibility: visible;
+      }
+    }
+    .browser-link-to {
+      font-size: 24px;
+      visibility: hidden;
+      color: #aaa;
+      &:hover {
+        border-bottom: none;
+        color: $brand-primary;
+      }
+    }
   }
   &.past {
     @include opacity(0.5);

@@ -5,7 +5,7 @@
 
         <% @timeslots.group_by(&:start).each do |start, timeslots| %>
           <div class="timesection <%= timeslot_past(start) %>">
-            <h2>
+            <h2 id="<%= start.strftime('%l:%M%P').strip %>">
               <strong><%= start.strftime('%l:%M%P') %></strong>
             </h2>
 
