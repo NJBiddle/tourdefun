@@ -1,41 +1,7 @@
 # TOUR DE FUN
 
-## Dev setup
+Tour de Fun is a bike centric music festival that has grown exponentially over the past three years. The festival features local bands & talented artists that perform & create in the Nashville area. The 4th annual ride will take place on Saturday, April 12th & will begin with a cookout & live music at 11:00 AM in Riverside Village. Tour de Fun participants will ride out at 12:30 PM, visiting 13 venues, & watching over 30 local bands perform.
 
-1. Clone the repo
-2. Run bundler
-3. Create db and run migrations
-4. Populate with seeds
+If you are interested in this community event, have any questions, comments or concerns, please contact:
 
-    bundle
-    rake db:create db:migrate db:seed
-
-### Image uploading
-
-Create `config/s3.rb` and add your S3 key and secret. This file is git-ignored and should never be committed.
-
-    ENV['S3_KEY'] = 'ADD YOUR KEY'
-    ENV['S3_SECRET'] = 'ADD YOUR SECRET'
-
-## Brainstorming
-
-* Large text, 18-20px
-* Typography (typekit?)
-
-### Home
-
-* Big background image
-* Overlay event info on top, centered
-* Sponsors logos underneath in a row
-
-### Evergreen pages (about, contact)
-
-* Center content (if subnav isn't needed) ~600px
-
-### Shows (Timeslots)
-
-* Display shows for this year
-* Yearly archive /shows (current), /shows/2013, etc
-* List, Map tabs
-* Auto build map with location, chrono data
-
+admin@tourdefun.net
