@@ -6,21 +6,21 @@
     </h3>
   </header>
 
-  <div class="text-muted timeslot-description">
-    <%= simple_format timeslot.description %>
-  </div>
+  <div class="col-sm-8">
+    <% if timeslot.artists.any? %>
+      <div class="text-muted timeslot-description">
+        <%= simple_format timeslot.description %>
+      </div>
 
-  <% if timeslot.artists.any? %>
-    <div class="col-sm-8">
       <%=raw timeslot.artists.map { |a|
             link_to_unless a.website.blank?,
               a.name, a.website
           }.to_sentence %>
-    </div>
+    <% else %>
+      <p class="text-muted">
+        No artists scheduled for this time
+      </p>
+    <% end %>
+  </div>
 
-  <% else %>
-    <p class="text-muted">
-      No artists scheduled for this time
-    </p>
-  <% end %>
 <% end %>
