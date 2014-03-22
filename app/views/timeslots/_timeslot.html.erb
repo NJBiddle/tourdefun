@@ -1,7 +1,7 @@
 <%= div_for timeslot, class: "row" do %>
   <header class="col-sm-12">
     <h3>
-      <%= link_map "<i class='fa fa-map-marker fa-fw'></i>".html_safe, timeslot.venue %>
+      <%= link_to_map "<i class='fa fa-map-marker fa-fw'></i>".html_safe, timeslot.venue %>
       <%= timeslot.venue.name %>
     </h3>
   </header>
