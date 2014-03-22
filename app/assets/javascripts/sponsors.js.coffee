@@ -1,3 +1,4 @@
+$platinum = undefined
 $bronze = undefined
 
 alignLogos = (collection) ->
@@ -13,6 +14,7 @@ resizeSets = ->
   alignLogos([$bronze])
 
 $(document).on 'ready page:load', (e) ->
+  $platinum = $('.platinum-sponsor')
   $bronze = $('.bronze-sponsor')
 
   if e.type == 'page:load'
