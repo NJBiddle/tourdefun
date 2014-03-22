@@ -4,7 +4,7 @@
       <%= image_tag bronze_sponsor.logo_url(:medium) %>
 
     <% else %>
-      <%= link_to bronze_sponsor.website do %>
+      <%= link_to convert_to_url(bronze_sponsor.website) do %>
         <%= image_tag bronze_sponsor.logo_url(:medium) %>
       <% end %>
     <% end %>

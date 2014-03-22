@@ -10,4 +10,14 @@ module ApplicationHelper
   def venues_count
     Venue.this_year.count
   end
+
+  def convert_to_url(string)
+    if /^http/ =~ string
+      valid_url = string
+    else
+      valid_url = "http://#{string}"
+    end
+
+    valid_url
+  end
 end

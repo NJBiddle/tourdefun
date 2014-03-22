@@ -1,7 +1,11 @@
 <div class="container">
   <div class="row sponsors-logos">
-      <% platinum_sponsors.each do |sponsor| %>
-    <div class="col-sm-6 text-center">
+    <p class="lead text-center">
+      Tour De Fun <%= Date.today.year %> is sponsored by
+    </p>
+
+    <% platinum_sponsors.each do |sponsor| %>
+      <div class="col-sm-6 text-center">
         <%= link_to_unless sponsor.website.blank?,
               image_tag(sponsor.logo.url(@page.home? ? :medium_inverted : :medium),
                         alt: sponsor.name,

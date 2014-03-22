@@ -5,7 +5,7 @@
             class: 'img-responsive center-block' %>
 
     <% else %>
-      <%= link_to platinum_sponsor.website do %>
+      <%= link_to convert_to_url(platinum_sponsor.website) do %>
         <%= image_tag platinum_sponsor.logo_url(:medium),
             class: 'img-responsive center-block' %>
       <% end %>

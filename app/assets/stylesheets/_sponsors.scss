@@ -7,6 +7,11 @@
   position: relative;
   margin: 30px 0;
   @include clearfix;
+  a {
+    &:hover {
+      border-bottom: none;
+    }
+  }
   .group-title {
     margin-bottom: 30px;
     text-align: center;
@@ -26,29 +31,31 @@
     img {
       display: block;
       margin: 0 auto;
-      margin-bottom: 40px;
     }
   }
 }
 
+.platinum-sponsor {
+  margin-bottom: 50px;
+}
+
 .bronze-sponsor {
-  height: 210px;
-  line-height: 210px;
   text-align: center;
+  margin-bottom: 40px;
   a {
     display: block;
     height: 100%;
   }
   img {
+    @include filter(grayscale(100%));
     max-width: 100%;
   }
-  @include respond-to($container-md) {
-    height: 150px;
-    line-height: 150px;
+  &:hover {
+    img {
+      @include filter(grayscale(0%));
+    }
   }
   @include respond-to($container-sm) {
-    height: 150px;
-    line-height: 150px;
     img {
       @include inline-block;
     }

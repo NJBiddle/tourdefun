@@ -13,6 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require jquery.equalheights/jquery.equalheights
 //= require bootstrap
 //= require timeslots
+//= require sponsors
 //= require analytics
