@@ -3,3 +3,7 @@ $(document).on 'page:change', ->
     _gaq.push ['_trackPageview']
   else if window.pageTracker?
     pageTracker._trackPageview()
+
+  if window._gauges?
+    _gauges.push(['track'])
+

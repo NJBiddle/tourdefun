@@ -7,7 +7,7 @@
 
   <meta property="og:title" content="Tour de Fun" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="http://tourdefun.net/" />   
+  <meta property="og:url" content="http://tourdefun.net/" />
   <meta property="og:image" content="http://s3.amazonaws.com/tourdefun/logo/logo.png" />
   <meta property="og:image:width" content="800" />
   <meta property="og:image:height" content="800" />
@@ -19,14 +19,12 @@
 
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
 
-
   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 
-  <%= render 'layouts/analytics' %>
-
+  <%= render 'shared/analytics' %>
 </head>
 <body class="<%= action_name %>" id="<%= controller_name %>">
 
