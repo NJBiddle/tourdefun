@@ -1,4 +1,4 @@
-$ ->
+$(document).on 'ready page:load', ->
   $('.timesection h2[id]').each ->
     link = $("<a>", {
       href: "##{@id}"
