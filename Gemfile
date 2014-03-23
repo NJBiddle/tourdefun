@@ -47,9 +47,8 @@ gem 'just-datetime-picker'
 
 gem "bower-rails", "~> 0.7.1"
 
-gem 'newrelic_rpm'
-
 group :production do
+  gem 'newrelic_rpm'
   gem 'rails_12factor'
 end
 
