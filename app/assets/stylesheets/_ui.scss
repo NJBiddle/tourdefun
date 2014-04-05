@@ -28,3 +28,17 @@ ul.list-plain {
     }
   }
 }
+
+.centered-tabs {
+  text-align: center;
+  a {
+    display: inline-block;
+    padding: 5px;
+    margin: 0 5px;
+    border-bottom: 1px solid transparent;
+    &.active {
+      font-weight: bold;
+      border-color: $brand-primary;
+    }
+  }
+}

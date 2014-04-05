@@ -1,4 +1,11 @@
-return unless window.location.pathname == "/shows"
+return unless window.location.pathname == "/schedule"
+
+$(document).on 'click', '.centered-tabs a', (e) ->
+  e.preventDefault()
+  $this = $(this)
+  $this.siblings().removeClass('active')
+  $this.addClass('active')
+  $this.tab('show')
 
 $ ->
   $canvas = $('#map-canvas')
@@ -22,10 +29,13 @@ $ ->
 
     setMarkers: ->
       $('.timeslot').each (i, timeslot) =>
-        $location = $(timeslot).find('[data-location]')
-        name      = $location.text()
-        address   = $location.data('location')
-        @geocodeAddress address, name, $(timeslot).clone()
+        name      = $(timeslot).text()
+        loc       = $(timeslot).data('location')
+
+        if loc
+          loc    = loc.split(',')
+          latLng =  new google.maps.LatLng(loc[0], loc[1])
+          @dropMarker latLng, name, $(timeslot).clone()
 
     dropMarker: (position, name, $el) ->
       marker = new google.maps.Marker
@@ -41,18 +51,6 @@ $ ->
       @canvas.fitBounds @bounds
       return
 
-    geocodeAddress: (address, name, el) ->
-      @geocoder.geocode
-        address: address
-      , (results, status) =>
-        if status is google.maps.GeocoderStatus.OK
-          position = results[0].geometry.location
-          @dropMarker position, name, el
-        else
-          console.error "Geocode was not successful for the following reason: " + status
-        return
-
-      return
 
   # Resize map when shown
   $(document).on 'shown.bs.tab', ->

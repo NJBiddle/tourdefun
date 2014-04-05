@@ -1,4 +1,4 @@
-<%= div_for timeslot, class: "row" do %>
+<%= div_for timeslot, class: "row", data: { location: "#{coords(timeslot)}" } do %>
   <header class="col-sm-12">
     <h3>
       <%= link_to_map "<i class='fa fa-map-marker fa-fw'></i>".html_safe, timeslot.venue %>
