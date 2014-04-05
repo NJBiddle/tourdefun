@@ -46,6 +46,7 @@ gem 'compass-rails'
 gem 'just-datetime-picker'
 
 gem "bower-rails", "~> 0.7.1"
+gem "geocoder"
 
 group :production do
   gem 'newrelic_rpm'
