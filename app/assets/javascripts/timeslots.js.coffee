@@ -35,7 +35,7 @@ $ ->
         if loc
           loc    = loc.split(',')
           latLng =  new google.maps.LatLng(loc[0], loc[1])
-          @dropMarker latLng, name, $(timeslot).clone()
+          @dropMarker latLng, name, $(timeslot)
 
     dropMarker: (position, name, $el) ->
       marker = new google.maps.Marker
