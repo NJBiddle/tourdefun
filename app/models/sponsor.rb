@@ -20,7 +20,7 @@ class Sponsor < ActiveRecord::Base
   end
 
   def self.years_for_select
-    (2010..Date.today.year).to_a.reverse
+    (2010..Date.today.year + 1).to_a.reverse
   end
 
   def self.this_year
