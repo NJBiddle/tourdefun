@@ -13,6 +13,7 @@ ActiveAdmin.register Timeslot do
       f.input :description, input_html: {
         rows: 3
       }
+      f.input :published
     end
 
     f.inputs "Details" do
