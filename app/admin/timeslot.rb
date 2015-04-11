@@ -2,8 +2,19 @@ ActiveAdmin.register Timeslot do
 
   controller do
     def permitted_params
-        params.permit!
-      end
+      params.permit!
+    end
+  end
+
+  index do
+    column :start
+    column :end
+    column :venue
+    column :artists do |timeslot|
+      timeslot.artists.map { |a| a.name }.to_sentence
+    end
+    column :description
+    default_actions
   end
 
   form do |f|
