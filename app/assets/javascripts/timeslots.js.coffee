@@ -1,5 +1,3 @@
-return unless window.location.pathname == "/schedule"
-
 $(document).on 'click', '.centered-tabs a', (e) ->
   e.preventDefault()
   $this = $(this)
@@ -7,8 +5,9 @@ $(document).on 'click', '.centered-tabs a', (e) ->
   $this.addClass('active')
   $this.tab('show')
 
-$ ->
+$(document).on 'ready page:load', (e) ->
   $canvas = $('#map-canvas')
+  return unless $canvas.length
 
   # TODO:
   # * Routing point to point
