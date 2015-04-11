@@ -4,10 +4,11 @@ class Timeslot < ActiveRecord::Base
 
   default_scope { order('start ASC') }
   scope :upcoming, -> {
-    where("start >= ?", Date.today.beginning_of_year)
+    where("start >= ? AND published = ?", Date.today.beginning_of_year, true)
   }
   scope :this_year, -> {
-    where(start: (Date.today.beginning_of_year..Date.today.end_of_year))
+    where(start: (Date.today.beginning_of_year..Date.today.end_of_year),
+          published: true)
   }
 
   just_define_datetime_picker :start
