@@ -1,9 +1,27 @@
 ActiveAdmin.register Timeslot do
+  config.filters = false
+
+  (2013..Date.today.year).to_a.reverse.each do |year|
+    scope(year.to_s) { |scope|
+      scope.where(start: Date.new(year).beginning_of_year..Date.new(year).end_of_year)
+    }
+  end
 
   controller do
     def permitted_params
-        params.permit!
-      end
+      params.permit!
+    end
+  end
+
+  index do
+    column :start
+    column :end
+    column :venue
+    column :artists do |timeslot|
+      timeslot.artists.map { |a| a.name }.to_sentence
+    end
+    column :description
+    default_actions
   end
 
   form do |f|
