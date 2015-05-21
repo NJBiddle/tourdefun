@@ -17,7 +17,7 @@ ActiveAdmin.register Sponsor do
       Sponsor.level_from_index(sponsor.level)
     end
     column :year
-    default_actions
+    actions
   end
 
   controller do
@@ -32,7 +32,7 @@ ActiveAdmin.register Sponsor do
       f.input :website
 
       f.input :logo, as: :file,
-        hint: f.template.image_tag(f.object.logo.url(:thumb))
+        hint: f.image_tag(f.object.logo.url(:thumb))
 
       f.input :level, as: :select,
         collection: Sponsor.levels_for_select
