@@ -22,3 +22,5 @@ config/initializers/*s3.rb
 
 # uploads
 public/uploads
+
+.env

@@ -21,7 +21,7 @@ ActiveAdmin.register Timeslot do
       timeslot.artists.map { |a| a.name }.to_sentence
     end
     column :description
-    default_actions
+    actions
   end
 
   form do |f|

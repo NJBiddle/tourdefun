@@ -3,7 +3,7 @@ ActiveAdmin.register Venue do
   index do
     column :name
     column :location
-    default_actions
+    actions
   end
 
   form do |f|
